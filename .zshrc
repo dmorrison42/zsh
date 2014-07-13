@@ -87,7 +87,28 @@ setopt EXTENDED_HISTORY
 setopt hist_ignore_space
 HISTSIZE=10000
 SAVEHIST=10000
-# set for emacs on the console.
-bindkey -e
+
+#Set backsearch
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+bindkey -a "k" history-beginning-search-backward
+bindkey -a "j" history-beginning-search-forward
+
+#Fix some vim keybindings http://zshwiki.org/home/zle/vi-mode
+bindkey -a 'gg' beginning-of-buffer-or-history
+bindkey -a 'g~' vi-oper-swap-case
+bindkey -a G end-of-buffer-or-history
+
+bindkey -a u undo
+bindkey -a '^R' redo
+bindkey '^?' backward-delete-char
+bindkey '^H' backward-delete-char
+
+vi-backward-word-end() {
+zle vi-forward-word-end
+  zle vi-backward-word -n 2 && zle vi-forward-word-end
+}
+vi-backward-blank-word-end() {
+  zle vi-forward-blank-word-end
+  zle vi-backward-blank-word -n 2 && zle vi-forward-blank-word-end
+}

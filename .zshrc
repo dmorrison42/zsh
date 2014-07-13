@@ -79,6 +79,10 @@ export PATH="/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/l
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [[ `uname` == 'Darwin' ]]; then
+  alias vim="mvim -v"
+fi
+
 setopt APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt histverify

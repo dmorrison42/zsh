@@ -1,0 +1,6 @@
+[submodule ".janus/python-mode"]
+	path = .janus/python-mode
+	url = https://github.com/klen/python-mode
+[submodule ".oh-my-zsh/custom/themes/pure"]
+	path = .oh-my-zsh/custom/themes/pure
+	url = https://github.com/pengwynn/pure

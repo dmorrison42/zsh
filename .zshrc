@@ -88,3 +88,21 @@ vi-backward-blank-word-end() {
 
 # Lower keybinding timeout http://dougblack.io/words/zsh-vi-mode.html
 export KEYTIMEOUT=1
+
+#
+# Fix random keys that don't work
+#
+# Insert
+bindkey '\e[2~' overwrite-mode
+# Delete
+bindkey '\e[3~' delete-char
+# Home
+bindkey '\e[7~' beginning-of-line
+# End
+bindkey '\e[8~' end-of-line
+# Page Up
+bindkey '\e[5~' history-beginning-search-backward
+# Page Down
+bindkey '\e[6~' history-beginning-search-forward
+# Remove scary words all over the place
+unset GREP_OPTIONS

@@ -51,7 +51,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/libexec:/usr/X11/bin:/Users/daniel/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

@@ -106,3 +106,6 @@ vi-backward-blank-word-end() {
   zle vi-forward-blank-word-end
   zle vi-backward-blank-word -n 2 && zle vi-forward-blank-word-end
 }
+
+# Lower keybinding timeout http://dougblack.io/words/zsh-vi-mode.html
+export KEYTIMEOUT=1
